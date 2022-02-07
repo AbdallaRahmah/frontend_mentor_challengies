@@ -1,0 +1,135 @@
+:root {
+  --Cyan: hsl(178, 100%, 50%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+/* start */
+.card {
+  width: 375px;
+  padding: 15px;
+  border-radius: 18px;
+  background-color: hsl(216, 50%, 16%);
+}
+@media (max-width: 578px) {
+  .card {
+    width: 320px;
+  }
+}
+.card .image-container {
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.card .image-container::before {
+  content: " ";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 50px;
+  height: 50px;
+  transform: translate(50%, -50%);
+  z-index: 4;
+  opacity: 0;
+  background-image: url(../images/icon-view.svg);
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.card .image-container::after {
+  content: "";
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background-color: var(--Cyan);
+  z-index: 3;
+  transition: 0.3s;
+}
+.card .image-container:hover::after {
+  opacity: 0.6;
+}
+.card .image-container:hover::before {
+  opacity: 1;
+}
+.card .image-container img {
+  width: 100%;
+}
+.card h1 {
+  color: hsl(0, 0%, 100%);
+  margin: 15px 0;
+  text-transform: capitalize;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card h1:hover {
+  color: var(--Cyan);
+}
+.card p {
+  margin-bottom: 15px;
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  text-transform: capitalize;
+}
+.card > span:first-of-type {
+  display: inline-flex;
+  align-items: center;
+  color: var(--Cyan);
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.card span:first-of-type img {
+  margin-right: 5px;
+}
+.card > span:last-of-type {
+  display: inline-flex;
+  align-items: center;
+  float: right;
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+}
+.card span:last-of-type img {
+  margin-right: 5px;
+}
+hr {
+  margin: 15px 0;
+  background-color: hsl(215, 32%, 27%);
+}
+.card .footer {
+  display: flex;
+  align-items: center;
+}
+.card .footer .img-con {
+  width: 36px;
+  height: 36px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  overflow: hidden;
+}
+.card .footer .img-con img {
+  width: 100%;
+  height: 100%;
+}
+.card .footer p {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+.card .footer p span {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.card .footer p span:hover {
+  color: var(--Cyan);
+}
