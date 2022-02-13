@@ -1,0 +1,180 @@
+:root {
+--Pale-Violet-sub-heading-atthetopoftheappUI: hsl(276, 100%, 81%);
+--Moderate-Violet-chatontheleft: hsl(276, 55%, 52%);
+--Desaturated-Dark-Violet-chatontheright: hsl(271, 15%, 43%);
+--Grayish-Blue-placeholdertext: hsl(206, 6%, 79%);
+--Very-Dark-Desaturated-Violemainheading: hsl(271, 36%, 24%);
+--DarkGrayishVioletparagraph: hsl(270, 7%, 64%);
+/* 
+#### Gradients
+
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
+
+- Light Magenta: hsl(293, 100%, 63%)
+- Light Violet: hsl(264, 100%, 61%) */
+
+--White: hsl(0, 0%, 100%);
+--Light-Grayish-Violet-appbackground: hsl(270, 20%, 96%);
+--Very-Dark-Desaturated-Violet-submitbuttonbackground: hsl(271, 36%, 24%);
+--Very-Light-Magenta-radiobuttonoutline: hsl(289, 100%, 72%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: hsl(270, 20%, 96%);
+}
+/* start */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (min-width: 991px) {
+    .container {
+        flex-direction: row;
+      }
+}
+section {
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 991px) {
+    section {
+        width: 50%;
+      }
+}
+section:first-of-type {
+  position: relative;
+}
+section:first-of-type::after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: -100px;
+  width: 75%;
+  height: 100%;
+  background-image: linear-gradient(to right ,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+  border-radius: 0 0 8rem 8rem;
+  z-index: -1;
+}
+section:first-of-type .chat-app {
+    margin: 3rem auto;
+  overflow: hidden;
+  width: 80%;
+  max-width: 320px;
+  background-color: hsl(270, 20%, 96%);
+  border: 10px solid white;
+  border-radius: 3rem;
+}
+section:first-of-type .chat-app .con-inf {
+  display: flex;
+  padding: 3rem 1rem 1rem;
+  align-items: center;
+  background-image: linear-gradient(to right ,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+  position: relative;
+  border-radius: 6px;
+}
+section:first-of-type .chat-app .con-inf::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  width: 55%;
+  background-color: white;
+  height: 55px;
+  border-radius: 2rem;
+  transform: translate(-50%, -50%);
+}
+section:first-of-type .con-inf > span {
+  color: white;
+}
+section:first-of-type .con-inf img {
+  margin: 0 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+section:first-of-type .con-inf .con-status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+section:first-of-type .con-status h2 {
+  font-size: .8rem;
+  text-transform: capitalize;
+  color: white;
+}
+section:first-of-type .con-status span {
+  font-size: 0.7rem;
+  text-transform: capitalize;
+  color: hsl(276, 100%, 81%);
+}
+
+section:first-of-type .chat-app .msg {
+  width: 50%;
+  margin: 0.5rem;
+  background-color: hsl(206, 6%, 79%);
+  border-radius: 1rem;
+  padding: 5px 10px;
+  color: hsl(276, 55%, 52%);
+  font-size: 0.7rem;
+  text-align: left;
+}
+section:first-of-type .chat-app .dog-img {
+  text-align: right;
+  padding-right: .5rem;
+}
+section:first-of-type .chat-app .dog {
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  text-align: right;
+  border-radius: 0.7rem;
+}
+section:first-of-type .chat-app .msg-l {
+  width: 50%;
+  margin: .5rem 0.5rem 0 auto;
+  background-color: white;
+  border-radius: 1rem;
+  padding: 5px 10px;
+  color: hsl(271, 15%, 43%);
+  font-size: 0.7rem;
+  text-align: left;
+}
+section:first-of-type .chat-app .msg-active {
+  width: 70%;
+  margin: 0.5rem;
+  background-image: linear-gradient(to right ,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+  border-radius: 1rem;
+  padding: 5px 10px;
+  color: white;
+  font-size: 0.7rem;
+  text-align: left;
+}
+section:first-of-type .chat-app .inter-msg {
+    padding: 1rem;
+    background-color: white;
+    margin: 1rem .5rem;
+    border-radius: 2rem;
+    text-align: left;
+    font-size: .8rem;
+    color: hsl(206, 6%, 79%);
+}
+/* last section */
+section:last-of-type h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  color: hsl(271, 36%, 24%);
+}
+section:last-of-type p {
+  margin: 0 auto;
+  width: 80%;
+  font-size: 1rem;
+  color: hsl(270, 7%, 64%);
+  line-height: 1.6;
+}
