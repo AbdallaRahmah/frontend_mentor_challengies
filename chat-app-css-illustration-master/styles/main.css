@@ -1,30 +1,10 @@
-:root {
---Pale-Violet-sub-heading-atthetopoftheappUI: hsl(276, 100%, 81%);
---Moderate-Violet-chatontheleft: hsl(276, 55%, 52%);
---Desaturated-Dark-Violet-chatontheright: hsl(271, 15%, 43%);
---Grayish-Blue-placeholdertext: hsl(206, 6%, 79%);
---Very-Dark-Desaturated-Violemainheading: hsl(271, 36%, 24%);
---DarkGrayishVioletparagraph: hsl(270, 7%, 64%);
-/* 
-#### Gradients
-
-These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient:
-
-- Light Magenta: hsl(293, 100%, 63%)
-- Light Violet: hsl(264, 100%, 61%) */
-
---White: hsl(0, 0%, 100%);
---Light-Grayish-Violet-appbackground: hsl(270, 20%, 96%);
---Very-Dark-Desaturated-Violet-submitbuttonbackground: hsl(271, 36%, 24%);
---Very-Light-Magenta-radiobuttonoutline: hsl(289, 100%, 72%);
-}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-    background-color: hsl(270, 20%, 96%);
+  background-color: hsl(270, 20%, 96%);
 }
 /* start */
 .container {
@@ -33,19 +13,20 @@ body {
   justify-content: center;
   flex-direction: column;
 }
-@media (min-width: 991px) {
-    .container {
-        flex-direction: row;
-      }
+@media (min-width: 767px) {
+  .container {
+    flex-direction: row;
+  }
 }
 section {
   width: 100%;
   text-align: center;
 }
-@media (min-width: 991px) {
-    section {
-        width: 50%;
-      }
+@media (min-width: 767px) {
+  section {
+    width: 50%;
+    text-align: left;
+  }
 }
 section:first-of-type {
   position: relative;
@@ -55,27 +36,37 @@ section:first-of-type::after {
   position: absolute;
   top: -30px;
   left: -100px;
-  width: 75%;
-  height: 100%;
-  background-image: linear-gradient(to right ,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+  width: calc(100% - 120px);
+  max-width: 500px;
+  height: 105%;
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
   border-radius: 0 0 8rem 8rem;
   z-index: -1;
 }
 section:first-of-type .chat-app {
-    margin: 3rem auto;
   overflow: hidden;
   width: 80%;
-  max-width: 320px;
+  max-width: 310px;
+  margin: 3rem auto;
   background-color: hsl(270, 20%, 96%);
-  border: 10px solid white;
+  border: 10px solid hsl(0, 0%, 100%);
   border-radius: 3rem;
+  box-shadow: 0px 0px 5px hsl(293, 100%, 63%);
 }
 section:first-of-type .chat-app .con-inf {
+  padding: 2rem 1rem 1rem;
   display: flex;
-  padding: 3rem 1rem 1rem;
-  align-items: center;
-  background-image: linear-gradient(to right ,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
   position: relative;
+  align-items: center;
   border-radius: 6px;
 }
 section:first-of-type .chat-app .con-inf::after {
@@ -83,21 +74,21 @@ section:first-of-type .chat-app .con-inf::after {
   position: absolute;
   top: 0px;
   left: 50%;
-  width: 55%;
-  background-color: white;
-  height: 55px;
-  border-radius: 2rem;
+  width: 50%;
+  height: 35px;
   transform: translate(-50%, -50%);
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
 }
 section:first-of-type .con-inf > span {
-  color: white;
+  color: hsl(0, 0%, 100%);
 }
 section:first-of-type .con-inf img {
-  margin: 0 10px;
   width: 30px;
   height: 30px;
+  margin: 0 10px;
+  border: 2px solid hsl(0, 0%, 100%);
   border-radius: 50%;
-  border: 2px solid white;
 }
 section:first-of-type .con-inf .con-status {
   display: flex;
@@ -105,76 +96,126 @@ section:first-of-type .con-inf .con-status {
   align-items: flex-start;
 }
 section:first-of-type .con-status h2 {
-  font-size: .8rem;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.8rem;
   text-transform: capitalize;
-  color: white;
 }
 section:first-of-type .con-status span {
+  color: hsl(276, 100%, 81%);
   font-size: 0.7rem;
   text-transform: capitalize;
-  color: hsl(276, 100%, 81%);
 }
-
 section:first-of-type .chat-app .msg {
-  width: 50%;
+  width: 55%;
   margin: 0.5rem;
+  padding: 5px 10px;
   background-color: hsl(206, 6%, 79%);
   border-radius: 1rem;
-  padding: 5px 10px;
   color: hsl(276, 55%, 52%);
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   text-align: left;
 }
 section:first-of-type .chat-app .dog-img {
+  padding-right: 0.5rem;
   text-align: right;
-  padding-right: .5rem;
 }
 section:first-of-type .chat-app .dog {
   width: 40px;
   height: 40px;
   margin: 0 5px;
-  text-align: right;
   border-radius: 0.7rem;
+  text-align: right;
 }
 section:first-of-type .chat-app .msg-l {
-  width: 50%;
-  margin: .5rem 0.5rem 0 auto;
-  background-color: white;
-  border-radius: 1rem;
+  width: 55%;
+  margin: 0.5rem 0.5rem 0 auto;
   padding: 5px 10px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 1rem;
   color: hsl(271, 15%, 43%);
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   text-align: left;
 }
 section:first-of-type .chat-app .msg-active {
   width: 70%;
   margin: 0.5rem;
-  background-image: linear-gradient(to right ,hsl(264, 100%, 61%),hsl(293, 100%, 63%));
+  padding: 1rem 1rem 1rem 3rem;
+  background-image: linear-gradient(
+    to right,
+    hsl(264, 100%, 61%),
+    hsl(293, 100%, 63%)
+  );
   border-radius: 1rem;
-  padding: 5px 10px;
-  color: white;
-  font-size: 0.7rem;
-  text-align: left;
+  position: relative;
+  color: hsl(0, 0%, 100%);
+  font-size: 0.6rem;
+}
+section:first-of-type .chat-app .msg-active::before {
+  content: "";
+  position: absolute;
+  top: 52%;
+  left: 9%;
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+section:first-of-type .chat-app .msg-active > span {
+  margin-left: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
 }
 section:first-of-type .chat-app .inter-msg {
-    padding: 1rem;
-    background-color: white;
-    margin: 1rem .5rem;
-    border-radius: 2rem;
-    text-align: left;
-    font-size: .8rem;
-    color: hsl(206, 6%, 79%);
+  margin: 1rem 0.5rem;
+  padding: 1rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  color: hsl(206, 6%, 79%);
+  text-align: left;
+  font-size: 0.8rem;
 }
+section:first-of-type .chat-app .inter-msg span {
+  margin: 0rem 0rem 0px 7rem;
+  padding: 0.2rem 0.3rem;
+  background-color: hsl(271, 36%, 24%);
+  border-radius: 50%;
+  color: hsl(0, 0%, 100%);
+}
+@media (max-width: 420px) {
+  section:first-of-type .chat-app .inter-msg span {
+    margin: 0rem 0rem 0px 1rem;
+  }
+}
+
 /* last section */
+section:last-of-type {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 767px) {
+  section:last-of-type {
+    margin-top: 0;
+    align-items: flex-start;
+  }
+}
 section:last-of-type h1 {
   margin-bottom: 1rem;
-  font-size: 2.5rem;
   color: hsl(271, 36%, 24%);
+  font-size: 2.5rem;
 }
 section:last-of-type p {
-  margin: 0 auto;
   width: 80%;
-  font-size: 1rem;
+  margin: 0 auto;
   color: hsl(270, 7%, 64%);
+  font-size: 1rem;
   line-height: 1.6;
+}
+@media (min-width: 767px) {
+  section:last-of-type p {
+    margin: 0;
+  }
 }
