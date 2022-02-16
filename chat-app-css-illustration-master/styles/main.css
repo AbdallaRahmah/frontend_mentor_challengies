@@ -5,6 +5,7 @@
 }
 body {
   background-color: hsl(270, 20%, 96%);
+  font-family: 'Rubik', sans-serif;
 }
 /* start */
 .container {
