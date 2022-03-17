@@ -4,8 +4,8 @@
   "description": "in this repository i solve frontend mentor challengies and share it with you here",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel 'fylo data storage component master'/index.html",
-    "build": "parcel build 'fylo data storage component master'/index.html"
+    "dev": "parcel 'fylo data storage component master'/src/index.html",
+    "build": "parcel build 'fylo data storage component master'/src/index.html"
   },
   "repository": {
     "type": "git",
