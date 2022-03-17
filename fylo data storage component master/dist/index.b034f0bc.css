@@ -1,0 +1,183 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-image: url("bg-mobile.51ba2f9e.png");
+  background-size: cover;
+}
+
+@media (min-width: 767px) {
+  body {
+    background-image: url("bg-desktop.8c103f81.png");
+  }
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #848794;
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 767px) {
+  .container {
+    width: 95%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 90%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 85%;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+@media (min-width: 767px) {
+  .container {
+    flex-direction: row;
+  }
+}
+
+.container .first {
+  margin: 1rem 0;
+  padding: 2rem;
+  width: 100%;
+  max-width: 576px;
+  height: 180px;
+  background-color: #1d2c67;
+  border: none;
+  border-radius: 0.5rem 4rem 0.5rem 0.5rem;
+}
+
+@media (min-width: 767px) {
+  .container .first {
+    margin: 0 1rem;
+  }
+}
+
+.container .first .logo {
+  width: 10rem;
+}
+
+.container .first .logo img {
+  width: 100%;
+}
+
+.container .first .img-con {
+  width: 12rem;
+  margin-top: 1rem;
+}
+
+.container .first .img-con img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.container .second {
+  margin: 1rem 0;
+  padding: 2rem;
+  width: 100%;
+  max-width: 576px;
+  height: 180px;
+  background-color: #1d2c67;
+  border: none;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+@media (min-width: 767px) {
+  .container .second {
+    margin: 0 1rem;
+  }
+}
+
+.container .second span {
+  color: #dddbff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.container .second h2 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.container .second .progress {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #0c122c;
+  border-radius: 1.5rem;
+  margin: 1rem 0;
+  padding: 0.2rem;
+}
+
+.container .second .progress span {
+  background-image: linear-gradient(to left, #ff4d97, #ffa399);
+  width: 70%;
+  height: 100%;
+  border-radius: 1.5rem;
+  float: left;
+}
+
+.container .second .gb span:last-child {
+  float: right;
+}
+
+.container .flow {
+  position: absolute;
+  bottom: calc(-25% - 1.5rem);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12rem;
+  height: 4rem;
+  padding-top: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: #dddbff;
+  text-align: center;
+}
+
+.container .flow h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.container .flow h2 span {
+  color: #0c122c;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=index.b034f0bc.css.map */
