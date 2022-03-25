@@ -37,7 +37,7 @@ body {
   justify-content: center;
   background-color: var(--White);
   border-radius: 1rem;
-  box-shadow: 0 0 3px var(--White);
+  box-shadow: 0 0 3px var(--Grayish_blue);
 }
 
 .box__img {
