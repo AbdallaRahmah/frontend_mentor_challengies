@@ -1,0 +1,153 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-color: #0c122c;
+  background-image: url(../images/bg-mobile.png);
+  background-size: cover;
+}
+
+@media (min-width: 767px) {
+  body {
+    background-image: url(../images/bg-desktop.png);
+  }
+}
+
+body .container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 767px) {
+  body .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+body .container .first__box {
+  margin: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 425px;
+  height: 180px;
+  background-color: #1d2c67;
+  border: none;
+  border-radius: 0.5rem 4rem 0.5rem 0.5rem;
+  -webkit-box-shadow: 0 0 5px #0c122c;
+          box-shadow: 0 0 5px #0c122c;
+}
+
+body .container .first__box .logo {
+  width: 10rem;
+}
+
+body .container .first__box .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+body .container .first__box .img-con {
+  width: 12rem;
+  margin-top: 1rem;
+}
+
+body .container .first__box .img-con img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+body .container .last__box {
+  margin: 1rem;
+  padding: 2rem;
+  width: 90%;
+  max-width: 425px;
+  height: 180px;
+  background-color: #1d2c67;
+  border: none;
+  border-radius: 0.5rem;
+  position: relative;
+  -webkit-box-shadow: 0 0 5px #0c122c;
+          box-shadow: 0 0 5px #0c122c;
+}
+
+body .container .last__box span {
+  color: #dddbff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+body .container .last__box h2 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+body .container .last__box .progress {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #0c122c;
+  border-radius: 1.5rem;
+  margin: 1rem 0;
+  padding: 0.2rem;
+}
+
+body .container .last__box .progress span {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff4d97), to(#ffa399));
+  background-image: linear-gradient(to left, #ff4d97, #ffa399);
+  width: 70%;
+  height: 100%;
+  border-radius: 1.5rem;
+  float: left;
+}
+
+body .container .last__box .gb span:last-child {
+  float: right;
+}
+
+body .container .flow {
+  position: absolute;
+  bottom: calc(-25% - 1.5rem);
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 12rem;
+  height: 4rem;
+  padding-top: 0.7rem;
+  border-radius: 0.5rem;
+  background-color: #dddbff;
+  text-align: center;
+}
+
+body .container .flow h2 {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+body .container .flow h2 span {
+  color: #0c122c;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=main.css.map */
