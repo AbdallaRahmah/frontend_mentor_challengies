@@ -13,37 +13,43 @@
       name="keywords"
       content="frontend ,mentor ,huddle-landing-page-with-alternating-feature-blocks-master"
     />
-    <meta name="author" content="Abdalla Rahmah" />
+    <meta name="author" content="Ben Rahmah" />
+    <!-- google font -->
     <link
       rel="shortcut icon"
       href="images/favicon-32x32.png"
       type="image/x-icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- style sheet -->
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
     <header>
       <div class="container">
         <div class="nav-bar">
-          <img src="images/logo.svg" alt="logo" />
-          <input type="text" name="search" placeholder="try it free" />
+          <img src="images/logo.svg" alt="logo" class="nav__img" />
+          <button class="nav--button">try it free</button>
         </div>
         <div class="main-content">
           <div class="content">
-            <h2>build the community your fans will love</h2>
-            <p>
+            <h2 class="content__title">
+              build the community your fans will love
+            </h2>
+            <p class="content__descripe">
               Hudlle re-imagines the way we build communities. you have a voice,
               but so does your audience.createconnections with your users as you
               engage in genuine discussion.
             </p>
-            <button>get started for free</button>
+            <button class="content--button">get started for free</button>
           </div>
           <div class="img-container">
-            <img
-              src="images/illustration-mockups.svg"
-              alt="img"
-              class="container"
-            />
+            <img src="images/illustration-mockups.svg" alt="img" class="img" />
           </div>
         </div>
       </div>
@@ -52,20 +58,31 @@
       <div class="container">
         <section class="grow-together">
           <div class="content">
-            <h2>grow together</h2>
-            <p>
+            <h2 class="content__title">grow together</h2>
+            <p class="content__descripe">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Accusamus eum dolore autem. Laborum similique nihil consequuntur
               eos fugit
             </p>
           </div>
-          <img src="images/illustration-grow-together.svg" alt="grow" />
+          <div class="img-cont">
+            <img
+              src="images/illustration-grow-together.svg"
+              class="img"
+              alt="grow"
+            />
+          </div>
         </section>
         <section class="flowing-conve">
-          <img src="images/illustration-flowing-conversation.svg" alt="grow" />
+          <div class="img-cont">
+            <img
+              src="images/illustration-flowing-conversation.svg"
+              alt="grow"
+            />
+          </div>
           <div class="content">
-            <h2>flowing conversation</h2>
-            <p>
+            <h2 class="content__title">flowing conversation</h2>
+            <p class="content__descripe">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Accusamus eum dolore autem. Laborum similique nihil consequuntur
               eos fugit
@@ -74,39 +91,45 @@
         </section>
         <section class="your-users">
           <div class="content">
-            <h2>your users</h2>
-            <p>
+            <h2 class="content__title">your users</h2>
+            <p class="content__descripe">
               Hudlle re-imagines the way we build communities. you have a voice,
               but so does your audience.createconnections with your users as you
               engage in genuine discussion.
             </p>
           </div>
-          <img src="images/illustration-your-users.svg" alt="grow" />
+          <div class="img-cont">
+            <img src="images/illustration-your-users.svg" alt="grow" />
+          </div>
         </section>
       </div>
     </main>
     <footer>
       <div class="get-started">
-        <h2>ready to build your community?</h2>
-        <button>get started for free</button>
+        <h2 class="start__title">ready to build your community?</h2>
+        <button class="start--button">get started for free</button>
       </div>
       <div class="container">
         <div class="cont-1">
-          <h3>huddle</h3>
-          <div class="contact-inf">
-            <img src="images/icon-location.svg" alt="location" />
-            <p>
+          <h3 class="cont__title">huddle</h3>
+          <div class="cont__info">
+            <img
+              src="images/icon-location.svg"
+              class="cont__img"
+              alt="location"
+            />
+            <p class="cont__desc">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi
               ex sed explicabo tempore.
             </p>
           </div>
-          <div class="contact-inf">
-            <img src="images/icon-phone.svg" alt="phone" />
-            <p>+1-543-123-4567</p>
+          <div class="cont__info">
+            <img src="images/icon-phone.svg" class="cont__img" alt="phone" />
+            <p class="cont__desc">+1-543-123-4567</p>
           </div>
-          <div class="contact-inf">
-            <img src="images/icon-email.svg" alt="mail" />
-            <p>example@huddle.com</p>
+          <div class="cont__info">
+            <img src="images/icon-email.svg" class="cont__img" alt="mail" />
+            <p class="cont__desc">example@huddle.com</p>
           </div>
         </div>
         <div class="cont-2">
@@ -118,7 +141,7 @@
           <h3>contact us</h3>
         </div>
         <div class="cont-3">
-          <p>&copy; copyright 2018 huddle all rights reserved.</p>
+          <p>&copy; build by Ben Rahmah</p>
         </div>
       </div>
     </footer>
