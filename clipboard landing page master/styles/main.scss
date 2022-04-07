@@ -1,136 +1,163 @@
+// render elements
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   font-family: "Bai Jamjuree", sans-serif;
   text-align: center;
 }
+
 //   colors
 $StrongCyan: hsl(171, 66%, 44%);
 $LightBlue: hsl(233, 100%, 69%);
 $DarkGrayishBlue: hsl(210, 10%, 33%);
 $GrayishBlue: hsl(201, 11%, 66%);
+
 // place holder
 .paragraph {
   margin: 1.5rem auto;
   width: 70%;
   color: $GrayishBlue;
 }
+
 /* container */
 .container {
   margin: 0 auto;
+
   @media (max-width: 576px) {
     & {
       width: 100%;
       padding: 0 2rem;
     }
   }
+
   @media (min-width: 577px) and (max-width: 767px) {
     & {
       width: 90%;
     }
   }
+
   @media (min-width: 768px) and (max-width: 991px) {
     & {
       width: 80%;
     }
   }
+
   @media (min-width: 992px) and (max-width: 1199px) {
     & {
-      width: 70%;
+      width: 75%;
     }
   }
+
   @media (min-width: 1200px) and (max-width: 1399px) {
     & {
       width: 1140px;
     }
   }
+
   @media (min-width: 1400px) {
     & {
       width: 1320px;
     }
   }
 }
+
 // start
 header {
   background-image: url(../images/bg-header-desktop.png);
   background-size: cover;
   padding: 3rem 0;
+
   @media (max-width: 576px) {
     & {
       background-image: url(../images/bg-header-mobile.png);
     }
   }
+
   img {
     width: 5rem;
   }
+
   h1 {
     margin-top: 3rem;
     color: $DarkGrayishBlue;
   }
+
   p {
     @extend .paragraph;
   }
-  button {
-    background-color: $StrongCyan;
-  }
-  button:last-of-type {
-    background-color: $LightBlue;
+
+  .button-blue {
     margin-left: 1rem;
   }
+
   @media (max-width: 576px) {
-    button:last-of-type {
+    .button-blue {
       margin: 1rem auto;
       display: block;
     }
   }
 }
+
 .keep-track {
   margin: 3rem 0;
+
   .container {
     padding: 3rem 0;
+
     h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
       color: $DarkGrayishBlue;
     }
+
     p {
       @extend .paragraph;
     }
   }
+
   .content-con {
     display: flex;
     align-items: center;
+
     img {
       width: 50%;
     }
+
     .content {
       text-align: left;
       padding: 0 5rem;
+
       div {
         margin-bottom: 1rem;
+
         h3 {
           color: $DarkGrayishBlue;
           margin-bottom: 0.5rem;
         }
+
         @media (max-width: 768px) {
           h3 {
             margin: 1rem 0;
           }
         }
+
         p {
           color: $GrayishBlue;
           line-height: 1.5;
         }
       }
+
       @media (max-width: 768px) {
         & {
           text-align: center;
         }
       }
     }
+
     @media (max-width: 768px) {
       & {
         flex-direction: column;
@@ -138,47 +165,50 @@ header {
     }
   }
 }
-/* special classes */
-.button {
-  padding: 0.8rem 2.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5rem;
-  color: #fff;
-}
+
 .access {
   margin: 3rem 0;
+
   .container {
     padding: 3rem 0;
+
     h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
       color: $DarkGrayishBlue;
     }
+
     p {
       @extend .paragraph;
     }
+
     img {
       width: 80%;
     }
   }
 }
+
 .supercharge {
   margin: 3rem 0;
+
   .container {
     padding: 3rem 0;
+
     h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
       color: $DarkGrayishBlue;
     }
+
     p {
       @extend .paragraph;
     }
+
     .box-con {
       margin-top: 3rem;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
       .box {
         h3 {
           font-size: 1.5rem;
@@ -188,89 +218,146 @@ header {
     }
   }
 }
+
 .social {
   margin: 3rem 0;
+
   .container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
     grid-gap: 50px;
+
     .img-con {
       width: 100px;
       height: 50px;
+
       img {
         width: 100%;
       }
     }
   }
 }
+
 .clipabord {
   margin: 3rem 0;
+
   .container {
     padding: 3rem 0;
+
     h2 {
       margin-bottom: 1rem;
       font-size: 1.5rem;
       color: $DarkGrayishBlue;
     }
+
     p {
       @extend .paragraph;
     }
-    button {
-      background-color: $StrongCyan;
-    }
-    button:last-of-type {
-      background-color: $LightBlue;
+
+    .button-blue {
       margin-left: 1rem;
     }
+
     @media (max-width: 576px) {
-      button:last-of-type {
+      .button-blue {
         margin: 1rem auto;
         display: block;
       }
     }
+
   }
 }
+
 footer {
   background-color: #9fabb226;
+
   .container {
     padding: 3rem 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
     .img-con {
-      flex: 1;
       img {
-        width: 5rem;
+        width: 3rem;
       }
     }
+
     .links {
-      margin-top: 1rem;
+      margin: 1rem 0;
       flex: 3;
+      max-width: 70%;
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
       grid-gap: 20px;
+
       a {
+        margin: .3rem 0;
         text-decoration: none;
         color: $DarkGrayishBlue;
-        text-transform: capitalize;
+        transition: .3s;
+
+        @media (min-width: 768px) {
+          & {
+            margin: 0;
+          }
+        }
+
+        &:hover {
+          color: $StrongCyan;
+        }
       }
+
       @media (max-width: 768px) {
         & {
           grid-template-columns: 1;
         }
       }
     }
+
     .social-media {
       margin-top: 1rem;
-      flex: 1;
+
       img {
         color: $DarkGrayishBlue;
         margin-right: 1rem;
-      }
-    }
-    @media (max-width: 768px) {
-      & {
-        flex-direction: column;
+
       }
     }
   }
+
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column;
+    }
+  }
+}
+
+/* special classes */
+.button-gren,
+.button-blue {
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 1px $DarkGrayishBlue;
+  transition: .3s;
+}
+
+.button-gren {
+  background-color: $StrongCyan;
+}
+
+.button-gren:hover {
+  background-color: hsl(171, 64%, 48%);
+}
+
+.button-blue {
+  background-color: $LightBlue;
+}
+
+.button-blue:hover {
+  background-color: hsl(233, 100%, 73%);
 }

@@ -42,7 +42,7 @@ body {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .container {
-    width: 70%;
+    width: 75%;
   }
 }
 
@@ -79,17 +79,12 @@ header h1 {
   color: #4c545d;
 }
 
-header button {
-  background-color: #26baa4;
-}
-
-header button:last-of-type {
-  background-color: #6173ff;
+header .button-blue {
   margin-left: 1rem;
 }
 
 @media (max-width: 576px) {
-  header button:last-of-type {
+  header .button-blue {
     margin: 1rem auto;
     display: block;
   }
@@ -162,15 +157,6 @@ header button:last-of-type {
   }
 }
 
-/* special classes */
-.button {
-  padding: 0.8rem 2.5rem;
-  font-size: 1rem;
-  border: none;
-  border-radius: 5rem;
-  color: #fff;
-}
-
 .access {
   margin: 3rem 0;
 }
@@ -207,8 +193,8 @@ header button:last-of-type {
   margin-top: 3rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .supercharge .container .box-con .box h3 {
@@ -251,17 +237,12 @@ header button:last-of-type {
   color: #4c545d;
 }
 
-.clipabord .container button {
-  background-color: #26baa4;
-}
-
-.clipabord .container button:last-of-type {
-  background-color: #6173ff;
+.clipabord .container .button-blue {
   margin-left: 1rem;
 }
 
 @media (max-width: 576px) {
-  .clipabord .container button:last-of-type {
+  .clipabord .container .button-blue {
     margin: 1rem auto;
     display: block;
   }
@@ -279,34 +260,44 @@ footer .container {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-footer .container .img-con {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .container .img-con img {
-  width: 5rem;
+  width: 3rem;
 }
 
 footer .container .links {
-  margin-top: 1rem;
+  margin: 1rem 0;
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+  max-width: 70%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  -ms-grid-columns: (minmax(140px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
   grid-gap: 20px;
 }
 
 footer .container .links a {
+  margin: .3rem 0;
   text-decoration: none;
   color: #4c545d;
-  text-transform: capitalize;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+@media (min-width: 768px) {
+  footer .container .links a {
+    margin: 0;
+  }
+}
+
+footer .container .links a:hover {
+  color: #26baa4;
 }
 
 @media (max-width: 768px) {
@@ -318,9 +309,6 @@ footer .container .links a {
 
 footer .container .social-media {
   margin-top: 1rem;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 footer .container .social-media img {
@@ -329,11 +317,42 @@ footer .container .social-media img {
 }
 
 @media (max-width: 768px) {
-  footer .container {
+  footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
+}
+
+/* special classes */
+.button-gren,
+.button-blue {
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5rem;
+  color: #fff;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 1px #4c545d;
+          box-shadow: 0 0 1px #4c545d;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.button-gren {
+  background-color: #26baa4;
+}
+
+.button-gren:hover {
+  background-color: #2cc9b1;
+}
+
+.button-blue {
+  background-color: #6173ff;
+}
+
+.button-blue:hover {
+  background-color: #7585ff;
 }
 /*# sourceMappingURL=main.css.map */
